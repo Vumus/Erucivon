@@ -1,0 +1,22 @@
+.beranda {
+  background-color: #088F8F;
+  min-height: 20vh;
+  font-size: 3vh;
+}
+
+.beranda-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+.font-top {
+  font-family: 'Courgette', cursive;
+  font-size: 40px;
+  color: aliceblue;
+}
+
+.font-top-s {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: bisque
+}
