@@ -1,8 +1,12 @@
-.berita-logo {
-    background-color: #282c34;
-    height: 2vmin;
-    text-decoration-color: black;
-    padding: 5px;
-    font-family: 'Times New Roman';
-    text-align: Center;
-  }
+.berita-logo:hover {
+   background-color: #282c34;
+   height: 2vmin;
+   text-decoration-color: black;
+   padding: 5px;
+   font-family: 'Times New Roman';
+   text-align: Center;
+}
+
+img {
+  display: flex;
+}

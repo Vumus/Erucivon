@@ -4,6 +4,7 @@ import '../CSS_Folder/sleding.css'
 function Sleding() {
   return (
     <Carousel>
+      <br></br>
       <Carousel.Item interval={2000}>
         <img
           className="slide"
