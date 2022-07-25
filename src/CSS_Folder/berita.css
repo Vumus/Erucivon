@@ -1,12 +1,14 @@
-.berita-logo:hover {
-   background-color: #282c34;
-   height: 2vmin;
-   text-decoration-color: black;
-   padding: 5px;
-   font-family: 'Times New Roman';
-   text-align: Center;
+.berita-logo {
+  font-family: 'Times';
+  color: brown;
+  text-align: Center;
 }
 
-img {
-  display: flex;
+.berita-image {
+  position: absolute;
+  width: 100%;
+}
+
+@media screen and (max-width: 550px) {
+  
 }

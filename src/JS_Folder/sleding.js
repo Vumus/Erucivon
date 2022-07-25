@@ -1,34 +1,41 @@
+import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import '../CSS_Folder/sleding.css'
 
 function Sleding() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
   return (
-    <Carousel>
-      <br></br>
-      <Carousel.Item interval={2000}>
+    <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
         <img
           className="slide"
-          src="https://kepulauanselayarkab.go.id/foto_berita/40img-20210715-wa0021_resize_72.jpg"
-          alt="First Slide"
+          src="https://wallpapersmug.com/large/29e647/portrait-daisy.jpg"
+          alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <Carousel.Caption className='slide-capt'>
+          <h3>Contoh Carousel #1</h3>
+          <p>Berikut merupakan contoh Carousel #1</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={2000}>
+      <Carousel.Item>
         <img
           className="slide"
-          src="http://gorontaloprov.go.id/wp-content/uploads/2021/09/4184d51d-c928-4ac7-9876-71dd93e3f227-e1631859054891.jpg"
+          src="https://images.unsplash.com/photo-1629694242280-20637c63285b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aXBob25lJTIwZGFya3xlbnwwfHwwfHw%3D&w=1000&q=80"
           alt="Second slide"
         />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <Carousel.Caption className='slide-capt'>
+          <h3>Contoh Carousel #2</h3>
+          <p>Berikut merupakan contoh Carousel #2</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );
 }
+
 
 export default Sleding;
