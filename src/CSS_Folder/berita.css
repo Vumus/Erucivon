@@ -4,11 +4,13 @@
   text-align: Center;
 }
 
-.berita-image {
-  position: absolute;
+.berita-card {
   width: 100%;
 }
 
 @media screen and (max-width: 550px) {
-  
+  .berita-card{
+    display: flex;
+    flex-direction: row;
+  }
 }

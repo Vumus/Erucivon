@@ -15,25 +15,25 @@ const Footer = () => {
                     <div className='head-foot'>DINAS PERHUBUNGAN KABUPATEN TULANG BAWANG</div>
                     <br></br>
                     <Row>
-                        <Column>
+                        <Column className='List'>
                             <h1 className='Column'>Tentang Kami</h1>
                             <div href="#">Contoh Tentang Kami #1</div>
                             <div href="#">Contoh Tentang Kami #2</div>
                             <br></br>
                         </Column>
-                        <Column>
+                        <Column className='List'>
                             <h1 className='Column'>Pelayanan</h1>
                             <div href="#">Contoh Pelayanan #1</div>
                             <div href="#">Contoh Pelayanan #2</div>
                             <br></br>
                         </Column>
-                        <Column>
+                        <Column className='List'>
                             <h1 className='Column'>Hubungi Kami</h1>
                             <div href="#">Contoh Hubungi Kami #1</div>
                             <div href="#">Contoh Hubungi Kami #2</div>
                             <br></br>
                         </Column>
-                        <Column>
+                        <Column className='List'>
                             <h1 className='Column'>Sosial Media</h1>
                             <div href="#">Facebook</div>
                             <div href="#">Instagram</div>

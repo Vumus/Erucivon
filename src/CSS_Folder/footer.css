@@ -21,7 +21,7 @@
     flex-wrap: wrap;
     text-align: left;
     margin-left: 30px;
-    color: cyan;
+    color: turquoise;
 }
 
 .Row{
@@ -44,4 +44,17 @@
     color: #fff;
     font-family: 'Times', cursive;
     font-weight: 500;
+}
+
+.List {
+    text-align: left;
+}
+
+@media screen and (max-width: 550px) {
+    .List{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: relative;
+    }
 }
