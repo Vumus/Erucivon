@@ -1,3 +1,4 @@
+import { Container } from '@material-ui/core';
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import '../CSS_Folder/sleding.css'
@@ -10,11 +11,12 @@ function Sleding() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Container>
+    <Carousel style={{width: "100%", height: "67vmax"}} activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
           className="slide"
-          src="https://wallpapersmug.com/large/29e647/portrait-daisy.jpg"
+          src="https://pertarung.kulonprogokab.go.id/files/news/normal/4d71eefe204a7a1b24c964ce1132fa4a.jpg"
           alt="First slide"
         />
         <Carousel.Caption className='slide-capt'>
@@ -25,7 +27,7 @@ function Sleding() {
       <Carousel.Item>
         <img
           className="slide"
-          src="https://images.unsplash.com/photo-1629694242280-20637c63285b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aXBob25lJTIwZGFya3xlbnwwfHwwfHw%3D&w=1000&q=80"
+          src="https://dishub.ntbprov.go.id/wp-content/uploads/2021/07/WhatsApp-Image-2021-07-22-at-18.13.08.jpeg"
           alt="Second slide"
         />
         <Carousel.Caption className='slide-capt'>
@@ -34,6 +36,7 @@ function Sleding() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </Container>
   );
 }
 

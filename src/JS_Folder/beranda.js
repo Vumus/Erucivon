@@ -3,7 +3,7 @@ import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap';
 
 export default function Beranda() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
       <Container>
         <Navbar.Brand href="#home">
           <img src='https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png' className='image'></img>

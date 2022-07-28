@@ -1,11 +1,16 @@
-.berita-logo {
-  font-family: 'Times';
-  color: brown;
-  text-align: Center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.berita-card {
-  width: 100%;
+.Berita-utama {
+  width: 20px;
+}
+
+.card:hover {
+  transform: scale(5);
 }
 
 @media screen and (max-width: 550px) {
