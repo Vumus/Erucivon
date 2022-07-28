@@ -1,4 +1,9 @@
-.image {
+.header-logo {
   width: 70px;
   max-height: auto;
+  padding-right: 5px;
+}
+
+.text-header {
+  display: flex;
 }

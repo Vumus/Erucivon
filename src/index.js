@@ -4,18 +4,22 @@ import './CSS_Folder/index.css';
 import Beranda from './JS_Folder/beranda';
 import Berita from './JS_Folder/berita';
 import Sleding from './JS_Folder/sleding';
-import Footer from './JS_Folder/footer.js';
+import Footer from './JS_Folder/footer';
+import Info from './JS_Folder/info';
+import { Row, Col } from 'react-bootstrap'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Beranda />
-    <br></br>
-    <Sleding />
-    <br></br>
-    <Berita />
-    <br></br>
-    <Footer />
+    <Row>
+      <Beranda />
+      <Sleding />
+      <Info />
+      <Col>
+        <Berita />
+      </Col>
+      <Footer />
+    </Row>
   </React.StrictMode>
 );
 

@@ -7,7 +7,7 @@ function Berita() {
       <Container>
         <Row>
           <Col md={3}>
-            <Card style={{ width: "50vmax", height: "95%"}}>
+            <Card style={{ width: "auto", height: "auto%"}}>
             <Card.Header>
               Featured
             </Card.Header>
@@ -38,7 +38,7 @@ function Berita() {
                 </div>
               </div>
             </Card>
-          <br></br>
+          <br/>
           </Col>
           <Col md={3}>
             <Card style={{width: "auto", height: "auto"}}>
@@ -54,18 +54,13 @@ function Berita() {
                 </div>
               </div>
             </Card>
+          <br/>
           </Col>
           <Col>
-            <Card style={{ width: '18rem' }}>
-            <Card.Header>Featured</Card.Header>
-            <ListGroup variant="flush">
-              <ListGroup.Item>Cras justo odio</ListGroup.Item>
-              <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-              <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-            </ListGroup>
-            </Card>
+            
           </Col>
           </Row>
+          <br/>
         </Container>
       </div>
   )

@@ -1,13 +1,15 @@
 import '../CSS_Folder/beranda.css';
-import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Nav, Navbar, NavDropdown, Container, Row, Card } from 'react-bootstrap';
 
 export default function Beranda() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+    <Navbar collapseOnSelect expand="lg" style={{background: "linear-gradient(#35858B, #4FBDBA)"}}>
       <Container>
-        <Navbar.Brand href="#home">
-          <img src='https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png' className='image'></img>
-          Dinas Perhubungan
+        <Navbar.Brand className='text-header' href="#home" style={{fontSize: "20px", fontFamily: "Times", fontWeight: "bold"}}>
+          <img src='https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png' className="header-logo"></img>
+          DINAS PERHUBUNGAN
+          <br/>Kab. Tulang Bawang
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

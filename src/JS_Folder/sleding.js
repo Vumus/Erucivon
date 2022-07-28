@@ -12,7 +12,8 @@ function Sleding() {
 
   return (
     <Container>
-    <Carousel style={{width: "100%", height: "67vmax"}} activeIndex={index} onSelect={handleSelect}>
+    <br/>
+    <Carousel style={{width: "100%", height: "auto"}} activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
           className="slide"
@@ -36,6 +37,7 @@ function Sleding() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+          <br/>
     </Container>
   );
 }
