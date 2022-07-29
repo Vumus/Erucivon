@@ -4,9 +4,9 @@ import { Nav, Navbar, NavDropdown, Container, Row, Card } from 'react-bootstrap'
 
 export default function Beranda() {
   return (
-    <Navbar collapseOnSelect expand="lg" style={{background: "linear-gradient(#35858B, #4FBDBA)"}}>
+    <Navbar collapseOnSelect expand="lg" style={{background: "linear-gradient(#0096FF, #5800FF)"}}>
       <Container>
-        <Navbar.Brand className='text-header' href="#home" style={{fontSize: "20px", fontFamily: "Times", fontWeight: "bold"}}>
+        <Navbar.Brand className='text-header' href="#home" style={{fontSize: "20px", fontFamily: "Times", fontWeight: "bold", color: "white"}}>
           <img src='https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png' className="header-logo"></img>
           DINAS PERHUBUNGAN
           <br/>Kab. Tulang Bawang

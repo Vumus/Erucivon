@@ -9,13 +9,24 @@
   width: 20px;
 }
 
-.card:hover {
-  transform: scale(5);
+@media screen and (max-width: 700px) {
+  .feat-wide{
+    display: none;
+  }
+  .feat-narrow{
+    display: flex;
+    transition: ease-in;
+  }
+  
 }
 
-@media screen and (max-width: 550px) {
-  .berita-card{
+@media screen and (min-width: 700px) {
+  .feat-wide{
     display: flex;
-    flex-direction: row;
+    margin-right: 20px;
   }
+  .feat-narrow{
+    display: none;
+  }
+  
 }
