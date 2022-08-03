@@ -1,10 +1,5 @@
-import { render } from '@testing-library/react';
-import axios from 'axios';
 import {react, useState, useEffect, Fragment} from 'react';
-import { Card, Row } from 'react-bootstrap';
-import '../CSS_Folder/berita.css';
-
-function Berita() {
+function API() {
   const [DataResponse, setDataResponse] = useState(null);
 
   useEffect(() => {
@@ -15,6 +10,7 @@ function Berita() {
   }, []);
 
   function getArtikel() {
+    const axios = require('axios');
     axios.get('http://adminmesuji.embuncode.com/api/article?instansi_id=4&per_page=3').then(function (response) {
     setDataResponse(response.data.data.data);
     }).catch(function (error) {
@@ -32,17 +28,22 @@ function Berita() {
         {
           DataResponse && DataResponse.map((item, index) => {
             return (
-              <Card className='berita-blk'>
-                <Card.Body className='berita-body'>{item.title}</Card.Body>
-              </Card>
+              <div className="card">
+                <div className="card-body">
+                  <img className='image-size' src={item.image_file_data} alt="" />
+                  <h1>{item.title}</h1>
+                  <p>{item.content}</p>
+                  <button>Detail</button>
+                </div>
+              </div>
             )
           })
         }
         </div>: ''
       }
-    </>
+      </>
   );
   
 }
 
-export default Berita;
+export default API;

@@ -5,8 +5,8 @@ import Beranda from './JS_Folder/beranda';
 import Berita from './JS_Folder/berita';
 import Sleding from './JS_Folder/sleding';
 import Footer from './JS_Folder/footer';
-import Info from './JS_Folder/info';
-import { Row, Col } from 'react-bootstrap'
+import Galeri from './JS_Folder/galeri';
+import { Row, Col } from 'react-bootstrap';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,10 +14,8 @@ root.render(
     <Row>
       <Beranda />
       <Sleding />
-      <Info />
-      <Col>
-        <Berita />
-      </Col>
+      <Galeri />
+      <Berita />
       <Footer />
     </Row>
   </React.StrictMode>

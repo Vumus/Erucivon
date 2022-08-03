@@ -1,32 +1,22 @@
-.Col {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Times New Roman', Times, serif
+.berita-body {
+  padding: 20px;
 }
 
-.Berita-utama {
-  width: 20px;
+.berita-blk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  color: #fff;
 }
 
-@media screen and (max-width: 700px) {
-  .feat-wide{
-    display: none;
-  }
-  .feat-narrow{
-    display: flex;
-    transition: ease-in;
-  }
-  
+.berita-img {
+  border-radius: 10px;
 }
 
-@media screen and (min-width: 700px) {
-  .feat-wide{
-    display: flex;
-    margin-right: 20px;
-  }
-  .feat-narrow{
-    display: none;
-  }
-  
+.berita-card {
+  display: flex;
+  text-align: right;
+  justify-content: space-between;
+  width: 100%;
 }

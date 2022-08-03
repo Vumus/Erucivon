@@ -1,4 +1,4 @@
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import '../CSS_Folder/sleding.css'

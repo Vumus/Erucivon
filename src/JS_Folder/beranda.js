@@ -4,14 +4,14 @@ import { Nav, Navbar, NavDropdown, Container, Row, Card } from 'react-bootstrap'
 
 export default function Beranda() {
   return (
-    <Navbar collapseOnSelect expand="lg" style={{background: "linear-gradient(#0096FF, #5800FF)"}}>
+    <Navbar collapseOnSelect expand="lg" style={{background: "linear-gradient(#00B4D8, #4D96FF)"}}>
       <Container>
-        <Navbar.Brand className='text-header' href="#home" style={{fontSize: "20px", fontFamily: "Times", fontWeight: "bold", color: "white"}}>
+        <Navbar.Brand className='text-header' href="#home" style={{fontSize: "20px", fontFamily: "Times", fontWeight: "bold"}}>
           <img src='https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png' className="header-logo"></img>
           DINAS PERHUBUNGAN
-          <br/>Kab. Tulang Bawang
+          <br/>Kab. Lampung Timur
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#beranda">Beranda</Nav.Link>
@@ -21,7 +21,7 @@ export default function Beranda() {
               <NavDropdown.Item href="#galeri1.1">Video</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#informasi">Informasi</Nav.Link>
-            <NavDropdown title="Layanan" id="collasible-nav-dropdown">
+            <NavDropdown title="Layanan" id="collasible-nav-dropdown" className="nav-text">
               <NavDropdown.Item href="#action/3.1">Live Chat</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Kotak Keluhan</NavDropdown.Item>
             </NavDropdown>

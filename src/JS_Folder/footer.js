@@ -5,7 +5,7 @@ import {
     Col as Column,
 } from 'react-bootstrap';
 import '../CSS_Folder/footer.css';
-import Box from '@material-ui/core/Box';
+import Box from '@mui/material/Box';
 
 
 const Footer = () => {
