@@ -4,6 +4,7 @@ function API() {
 
   useEffect(() => {
     getArtikel();
+
     return () => {
       setDataResponse(null);
     };

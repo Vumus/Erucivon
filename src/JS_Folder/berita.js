@@ -1,48 +1,49 @@
-import { render } from '@testing-library/react';
 import axios from 'axios';
-import {react, useState, useEffect, Fragment} from 'react';
-import { Card, Row } from 'react-bootstrap';
+import { React, useState, UseEffect, useEffect } from 'react';
+import { Card, Button, Row } from 'react-bootstrap';
 import '../CSS_Folder/berita.css';
 
-function Berita() {
-  const [DataResponse, setDataResponse] = useState(null);
+const News = () => {
+    const [DataNews, setDataNews] = useState(null);
+    useEffect(() => {
+        getNews();
+        return () => {
+            setDataNews(null);
+        };
+    }, []);
 
-  useEffect(() => {
-    getArtikel();
-    return () => {
-      setDataResponse(null);
-    };
-  }, []);
-
-  function getArtikel() {
-    axios.get('http://adminmesuji.embuncode.com/api/article?instansi_id=4&per_page=3').then(function (response) {
-    setDataResponse(response.data.data.data);
-    }).catch(function (error) {
-
-    }).then(function () {
-
-    });
-  }
-
+    function getNews() {
+        const axios = require("axios");
+        axios
+            .get(("http://adminmesuji.embuncode.com/api/news?instansi_id=5&per_page=4"))
+            .then(function(response) {
+                setDataNews(response.data.data.data);
+            })
+            .catch(function(error) {})
+            .then(function() {});
+    }
     return (
-    <>
-      {
-        (DataResponse != null) ? 
-          <div className="container-main">
-        {
-          DataResponse && DataResponse.map((item, index) => {
-            return (
-              <Card className='berita-blk'>
-                <Card.Body className='berita-body'>{item.title}</Card.Body>
-              </Card>
-            )
-          })
+        <>
+        {(DataNews != null) ? 
+            <Row>
+                {
+                    DataNews && DataNews.map((item, index) => {
+                    return (
+                        <Card className='card-news'>
+                            <Card.Body className='card-body'>
+                                <Card.Img className='card-image' src={item.image_file_data} alt="" />
+                                <Card.Title>{item.title}</Card.Title>
+                                <Card.Text>{item.content}</Card.Text>
+                                <button>Detail</button>
+                            </Card.Body>
+                        </Card>
+                    )
+                    })
+                }
+            </Row>: ''
         }
-        </div>: ''
-      }
-    </>
-  );
-  
-}
+        </>
+    );
+};
 
-export default Berita;
+export default News;

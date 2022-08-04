@@ -1,22 +1,18 @@
-.berita-body {
-  padding: 20px;
-}
-
-.berita-blk {
-  display: flex;
-  flex-direction: column;
+.card-news {
+  margin: 20px;
   align-items: center;
-  margin-top: 64px;
-  color: #fff;
+  width: 20rem;
+  height: auto;
+  box-shadow: 2px 5px 6px grey;
 }
 
-.berita-img {
-  border-radius: 10px;
-}
-
-.berita-card {
-  display: flex;
-  text-align: right;
+.card-body {
+  width: auto;
+  height: auto;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-image {
   width: 100%;
 }
