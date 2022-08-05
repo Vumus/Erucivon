@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <Box className='Box'>
                 <div className='footer-wide'>
-                    <div className='head-foot'>DINAS PERHUBUNGAN KABUPATEN TULANG BAWANG</div>
+                    <div className='head-foot'>DINAS PERHUBUNGAN KABUPATEN LAMPUNG TIMUR</div>
                     <br></br>
                     <Row>
                         <Column className='List'>
@@ -37,7 +37,7 @@ const Footer = () => {
                     </Row>
                 </div>
                 <div className='footer-narrow'>
-                    <div className='head-foot'>DINAS PERHUBUNGAN KABUPATEN TULANG BAWANG</div>
+                    <div className='head-foot'>DINAS PERHUBUNGAN KABUPATEN LAMPUNG TIMUR</div>
                     <br></br>
                     <Row className='List'>
                         <h1 className='Column'>Pelayanan</h1>

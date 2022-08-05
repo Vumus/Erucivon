@@ -7,8 +7,8 @@
 .slide {
     display: flex;
     width: 100%;
-    max-height: 100%;
-    min-height: 100%;
+    max-height: 30rem;
+    min-height: 30rem;
 }
 
 .slide-capt {

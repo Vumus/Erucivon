@@ -11,7 +11,9 @@ function Sleding() {
   };
 
   return (
-    <Container>
+    <Container
+      src
+      >
     <br/>
     <Carousel style={{width: "100%", height: "auto"}} activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>

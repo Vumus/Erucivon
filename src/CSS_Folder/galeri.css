@@ -13,8 +13,14 @@
     padding: 10px;
 }
 
-.Kartu {
+
+.galeri-card {
     width: 100%;
-    height: 100%;
-    padding: 2px;
+    height: auto;
+}
+
+.body-galeri-card {
+    margin: 10px;
+    width: 50%;
+    height: auto;
 }

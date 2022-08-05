@@ -4,10 +4,10 @@ import { Nav, Navbar, NavDropdown, Container, Row, Card } from 'react-bootstrap'
 
 export default function Beranda() {
   return (
-    <Navbar collapseOnSelect expand="lg" style={{background: "linear-gradient(#00B4D8, #4D96FF)"}}>
+    <Navbar collapseOnSelect expand="lg" className='navbar-default'>
       <Container>
         <Navbar.Brand className='text-header' href="#home" style={{fontSize: "20px", fontFamily: "Times", fontWeight: "bold"}}>
-          <img src='https://upload.wikimedia.org/wikipedia/commons/e/e1/LOGO_KABUPATEN_TULANG_BAWANG.png' className="header-logo"></img>
+          <img src='https://rekreartive.com/wp-content/uploads/2019/03/Logo-Lampung-Timur-Warna.png' className="header-logo"></img>
           DINAS PERHUBUNGAN
           <br/>Kab. Lampung Timur
         </Navbar.Brand>

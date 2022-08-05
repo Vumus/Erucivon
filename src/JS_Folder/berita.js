@@ -3,11 +3,11 @@ import { Card, Button, Row } from 'react-bootstrap';
 import '../CSS_Folder/berita.css';
 
 const News = () => {
-    const [DataNews, setDataNews] = useState(null);
+    const [DataNews, setDataGaleri] = useState(null);
     useEffect(() => {
         getNews();
         return () => {
-            setDataNews(null);
+            setDataGaleri(null);
         };
     }, []);
 
@@ -16,15 +16,16 @@ const News = () => {
         axios
             .get(("http://adminmesuji.embuncode.com/api/news?instansi_id=5&per_page=6"))
             .then(function(response) {
-                setDataNews(response.data.data.data);
+                setDataGaleri(response.data.data.data);
             })
             .catch(function(error) {})
             .then(function() {});
     }
     return (
         <>
+        <h1 className='judul'>Berita Terkini</h1>
         {(DataNews != null) ? 
-            <Row className=''>
+            <Row className='news-row'>
                 {
                     DataNews && DataNews.map((item, index) => {
                     return (
