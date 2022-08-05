@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { React, useState, UseEffect, useEffect } from 'react';
 import { Card, Button, Row } from 'react-bootstrap';
 import '../CSS_Folder/berita.css';
@@ -15,7 +14,7 @@ const News = () => {
     function getNews() {
         const axios = require("axios");
         axios
-            .get(("http://adminmesuji.embuncode.com/api/news?instansi_id=5&per_page=4"))
+            .get(("http://adminmesuji.embuncode.com/api/news?instansi_id=5&per_page=6"))
             .then(function(response) {
                 setDataNews(response.data.data.data);
             })
@@ -25,7 +24,7 @@ const News = () => {
     return (
         <>
         {(DataNews != null) ? 
-            <Row>
+            <Row className=''>
                 {
                     DataNews && DataNews.map((item, index) => {
                     return (
