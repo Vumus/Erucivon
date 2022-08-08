@@ -1,21 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import React, {useState} from 'react';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-function App()
-{
-  const[data, setData]=useState(null)
-  function getData(val)
-  {
-    setData(val.target.value)
-  }
-  return (
-    <div className="App">
-      <img src={logo} className="App-logo" alt="logo"/>
-      <p> You type "{data}", Correct?</p>
-      <input type="text" onChange={getData}/>
-    </div>
-  );
+const App = () => {
+    return (
+        <>
+            <Routes>
+                <Route path='/' exact element={<Beranda />} />
+                <Route path='/Berita' exact element={<Berita />} />
+                <Route path='/Artikel' exact element={<Artikel />} />
+                <Route path='/' exact element={<Beranda />} />
+            </Routes>
+        </>
+    )
 }
-
-export default App;

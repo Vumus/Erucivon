@@ -1,9 +1,12 @@
-import { React, useState, UseEffect, useEffect } from 'react';
-import { Card, Button, Row } from 'react-bootstrap';
-import '../CSS_Folder/berita.css';
-import { artikelNews } from '../apilink';
+import {React, useEffect, useState} from 'react';
+import axios from 'axios';
+import { useParams, Link } from 'react-router-dom';
+import {Row, Col, Card} from "react-bootstrap";
+import { artikelNews } from '../../apilink';
+import Beranda from '../../JS_Folder/beranda';
+import './beritaPage.css'
 
-const News = () => {
+const BeritaPage = () => {
     const [DataNews, setDataNews] = useState(null);
     useEffect(() => {
         getNews();
@@ -24,9 +27,10 @@ const News = () => {
     }
     return (
         <>
-        <h1 className='berita-header'>Berita Terkini</h1>
+        <h1 className='berita-header'>Berita</h1>
         {(DataNews != null) ? 
             <Row className='news-row'>
+                <Beranda />
                 {
                     DataNews && DataNews.map((item, index) => {
                     return (
@@ -47,4 +51,4 @@ const News = () => {
     );
 };
 
-export default News;
+export default BeritaPage;

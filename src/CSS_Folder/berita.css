@@ -1,4 +1,4 @@
-.judul {
+.berita-header {
   display: flex;
   margin: 20px;
   font-size: 3rem;
@@ -23,6 +23,7 @@
 
 .card-news:hover {
   transform: scale(1.03);
+  transition: 200ms;
 }
 
 .card-body {
