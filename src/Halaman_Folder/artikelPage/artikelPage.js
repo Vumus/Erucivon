@@ -1,45 +1,45 @@
 import {React, useEffect, useState} from 'react';
 import axios from 'axios';
-import { useParams, Link } from 'react-router-dom';
 import {Row, Col, Card, Button} from "react-bootstrap";
-import { artikelNews } from '../../apilink';
+import { artikelMain } from '../../apilink';
 import Beranda from '../../JS_Folder/beranda';
 import Footer from '../../JS_Folder/footer';
+import '../../CSS_Folder/artikel.css';
 
-const BeritaPage = () => {
-    const [DataNews, setDataNews] = useState(null);
+const ArtikelPage = () => {
+    const [DataArtikel, setDataArtikel] = useState(null);
     useEffect(() => {
-        getNews();
+        getArtikel();
         return () => {
-            setDataNews(null);
+            setDataArtikel(null);
         };
     }, []);
 
-    function getNews() {
+    function getArtikel() {
         const axios = require("axios");
         axios
-            .get(artikelNews)
+            .get(artikelMain)
             .then(function(response) {
-                setDataNews(response.data.data.data);
+                setDataArtikel(response.data.data.data);
             })
             .catch(function(error) {})
             .then(function() {});
     }
     return (
         <>
-        {(DataNews != null) ? 
-            <Row className='news-row'>
+        {(DataArtikel != null) ? 
+            <Row className='artikel-row'>
                 <Beranda />
-                <h1 className='berita-header'>Berita</h1>
+                <h1 className='artikel-header'>Artikel</h1>
                 {
-                    DataNews && DataNews.map((item, index) => {
+                    DataArtikel && DataArtikel.map((item, index) => {
                     return (
-                        <Card className='card-news'>
+                        <Card className='artikel-card'>
                             <Card.Body className='card-body'>
                                 <Card.Img className='card-image' src={item.image_file_data} alt="" />
                                 <Card.Title>{item.title}</Card.Title>
-                                <Card.Text>{item.content}</Card.Text>
-                                <Button href={`/BeritaFull/${item.id}`}>Detail</Button>
+                                <Card.Text>{item.intro}</Card.Text>
+                                <Button href={`/ArtikelFull/${item.id}`}>Detail</Button>
                             </Card.Body>
                         </Card>
                     )
@@ -52,4 +52,4 @@ const BeritaPage = () => {
     );
 };
 
-export default BeritaPage;
+export default ArtikelPage;

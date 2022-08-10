@@ -1,50 +1,50 @@
 import { React, useState, UseEffect, useEffect } from 'react';
 import { Card, Button, Row } from 'react-bootstrap';
-import '../CSS_Folder/berita.css';
-import { artikelNews } from '../apilink';
+import { galeriImg } from '../apilink';
+import Box from '@mui/material/Box';
+import '../CSS_Folder/galeri.css';
 
-const News = () => {
-    const [DataNews, setDataNews] = useState(null);
+const Galeri = () => {
+    const [DataGaleri, setDataGaleri] = useState(null);
     useEffect(() => {
         getNews();
         return () => {
-            setDataNews(null);
+            setDataGaleri(null);
         };
     }, []);
 
     function getNews() {
         const axios = require("axios");
         axios
-            .get(artikelNews)
+            .get(galeriImg)
             .then(function(response) {
-                setDataNews(response.data.data.data);
+                setDataGaleri(response.data.data.data);
             })
             .catch(function(error) {})
             .then(function() {});
     }
     return (
         <>
-        <h1 className='berita-header'>Berita Terkini</h1>
-        {(DataNews != null) ? 
-            <Row className='news-row'>
+        {(DataGaleri != null) ? 
+            <Box className='galeri-bg'>
+                <h1 className='galeri-header'>Galeri</h1>
                 {
-                    DataNews && DataNews.map((item, index) => {
+                    DataGaleri && DataGaleri.map((item, index) => {
                     return (
-                        <Card className='card-news'>
-                            <Card.Body className='card-body'>
+                        <Card className='galeri-card'>
+                            <Card.Body className='body-galeri-card'>
                                 <Card.Img className='card-image' src={item.image_file_data} alt="" />
                                 <Card.Title>{item.title}</Card.Title>
                                 <Card.Text>{item.content}</Card.Text>
-                                <Button href={`/BeritaFull/${item.id}`}>Detail</Button>
                             </Card.Body>
                         </Card>
                     )
                     })
                 }
-            </Row>: ''
+            </Box>: ''
         }
         </>
     );
 };
 
-export default News;
+export default Galeri;
