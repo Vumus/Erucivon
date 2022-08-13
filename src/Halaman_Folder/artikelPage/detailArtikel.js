@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 import Beranda from '../../JS_Folder/beranda';
 import Footer from '../../JS_Folder/footer';
 import { artikelDetail } from '../../apilink';
+import '../../CSS_Folder/artikel.css'
 
 const ArtikelFull = () => {
     const {id} = useParams();
@@ -30,13 +31,13 @@ const ArtikelFull = () => {
 
     return (
         <>
-            <Row className='artikel-row'>
+            <Row className='artikel-row-full'>
                 <Beranda />
-                <div>
-                    <h1 className='artikel-header'>{FullArtikel.title}</h1>
-                    <img src={FullArtikel.image_file_data} />
-                    <text>{FullArtikel.content}</text>
-                </div>
+                <Card className='artikel-card-full'>
+                    <Card.Title className='artikel-header'>{FullArtikel.title}</Card.Title>
+                    <Card.Img className='card-image' src={FullArtikel.image_file_data} />
+                    <Card.Text className='artikel-card-text'>{FullArtikel.content}</Card.Text>
+                </Card>
                 <Footer />
             </Row>: ''
         </>

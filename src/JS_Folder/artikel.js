@@ -33,7 +33,7 @@ const Artikel = () => {
                     return (
                             <Card className='artikel-card'>
                                 <Card.Body className='card-body'>
-                                    <Card.Img className='card-image' src={item.image_file_data} />
+                                    <Card.Img src={item.image_file_data} />
                                     <Card.Title>{item.title}</Card.Title>
                                     <Card.Text>{item.intro}</Card.Text>
                                     <Button href={`/ArtikelFull/${item.id}`}>Detail</Button>

@@ -1,5 +1,5 @@
 import { React, useState, UseEffect, useEffect } from 'react';
-import {ListGroup, Row, Card} from 'react-bootstrap';
+import {ListGroup, Row, Card, Button} from 'react-bootstrap';
 import Box from '@mui/material/Box';
 import '../CSS_Folder/dokumen.css';
 import { dokumenList } from '../apilink';
@@ -23,21 +23,22 @@ const Dokumen = () => {
             .catch(function(error) {})
             .then(function() {});
     }
+    console.log(DataDokumen)
+
     return (
         <>
-        <h1 className='dokumen-header'>Dokumen Terkini</h1>
         {(DataDokumen != null) ? 
             <Box className='dokumen-bg'>
                 <Row className='news-row'>
+                <h1 className='dokumen-header'>Dokumen Terkini</h1>
                     {
                         DataDokumen && DataDokumen.map((item, index) => {
                         return (
                             <Card className='dokumen-card'>
                                 <Card.Body className='card-body'>
-                                    <Card.Img className='card-image' src={item.image_file_data} alt="" />
-                                    <Card.Title>{item.title}</Card.Title>
-                                    <Card.Text>{item.intro}</Card.Text>
-                                    <button>Detail</button>
+                                    <Card.Title>{item.dokumen_item[0].dokumen_file_name}</Card.Title>
+                                    <Card.Text>{item.dokumen_item[0].description_dokumen}</Card.Text>
+                                    <Button href={`/DokumenFull/${item.slug}`}>Detail</Button>
                                 </Card.Body>
                             </Card>
                         )

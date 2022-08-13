@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Beranda() {
   return (
     <Navbar collapseOnSelect expand="lg" className='navbar-default'>
-      <Container>
+      <Container className='kontainer'>
         <Navbar.Brand className='text-header' href="/" style={{fontSize: "20px", fontFamily: "Times", fontWeight: "bold"}}>
           <img src='https://rekreartive.com/wp-content/uploads/2019/03/Logo-Lampung-Timur-Warna.png' className="header-logo"></img>
           DINAS PERHUBUNGAN
@@ -17,10 +17,12 @@ export default function Beranda() {
             <Nav.Link href="/">Beranda</Nav.Link>
             <Nav.Link href="/Berita">Berita</Nav.Link>
             <Nav.Link href="/Artikel">Artikel</Nav.Link>
+            <Nav.Link href="/Dokumen">Dokumen</Nav.Link>
             <NavDropdown title="Galeri" id="collasible-nav-galeri">
               <NavDropdown.Item href="/GaleriFoto">Foto</NavDropdown.Item>
               <NavDropdown.Item href="/GaleriVideo">Video</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="/StatisPage">Statis Page</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
