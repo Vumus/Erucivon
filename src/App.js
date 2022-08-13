@@ -28,7 +28,6 @@ const App = () => {
                 <Route path='/FotoFull/:slug' exact element={<FotoFull />} />
                 <Route path='/GaleriVideo' exact element={<GaleriVideo />} />
                 <Route path='/VideoFull/:slug' exact element={<VideoFull />} />
-                <Route path='/StatisPage' exact element={<StatisPage />} />
             </Routes>
         </>
     )
